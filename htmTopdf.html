@@ -1,0 +1,150 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<script>
+</script>
+<!-- BEGIN .app-main -->
+<div class="app-main">
+    <!-- BEGIN .main-heading -->
+   
+    <!-- END: .main-heading -->
+    <!-- BEGIN .main-content -->
+   <div class="main-content">
+        <!-- Row start -->
+        <div class="row gutters">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                <div class="card">
+                    <div class="card-header" style="background:#fff;">
+                            <button id="download-button" class=" btn btn-sm btn-primary">save & download</button>
+                        </div>
+                        <div id="download-aadhar">
+                    <div class="card-body" style="overflow:scroll;">
+                        <div class="card aadhar_card" >
+                          <div class="card-body aadhar_body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <img src="https://img.freepik.com/free-psd/digital-marketing-agency-corporate-facebook-cover-template_106176-2258.jpg">
+                                </div>
+                                <div class="col-md-2 aadhaer_details">
+                                    <div class="user_img">
+                                        
+                                        <img src="" width="85px">
+                                            
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="user_details">
+                                        <p class="name">Shree Ram</p>
+                                        <p class="dob">1997-02-20</p>
+                                        <p class="gender">Male</p>
+                                        <p class="uid"><b>4365465854</b></p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="digilocker-verified">
+                                        <img src="<?php echo base_url('images/DigiLocker-Verified.png'); ?>" height="60" max-width="100%" border="0">
+                                    </div>
+                                </div><br><br>
+                                <div class="border-line"></div>
+                                <div class="address">
+                                    <p><b>Address</b></p>
+                                   
+                                            <p>Noida sector 62</p>
+                                </div>
+                                <div class="border-line2"></div>
+                                <div class="col-md-12">
+                                    <img src="https://img.freepik.com/free-psd/rock-music-concert-youtube-banner-template_23-2149118817.jpg" width="100%" style="margin-top: 18px">
+                                </div>
+                            </div>
+
+                           <!--  <p class="card-text">
+                              content.</p> -->
+                          </div>
+                      </div>
+                        
+                        <!-- Card -->
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <!-- Row ends -->
+    </div>
+   
+<style type="text/css">
+
+    .aadhar_card {
+        width: 596px;
+        margin: auto;
+    }
+    .card {
+        border-radius: 1.15rem !important;
+    }
+    .aadhar_body {
+      /*  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 20px;*/
+    }
+    .user_img img {
+        width: 86px;
+        margin-top: 43px;
+    }
+    .not_found{
+        margin-top: 43px;
+    }
+    .user_details {
+        margin-top: 43px;
+        margin-left: 60px;
+        font-family: monospace;
+        font-size: large;
+        line-height: 16px;
+    }
+    .digilocker-verified {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 68%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+    .aadhaer_details {
+        margin-left: 23px;
+    }
+    .border-line {
+        width: 560px;
+        height: 41px;
+        position: absolute;
+        border-bottom: 1px solid grey;
+        margin-top: 34%;
+        margin-left: 17px;
+    }
+    .border-line2 {
+        width: 560px;
+        height: 41px;
+        position: absolute;
+        border-bottom: 1px solid grey;
+        margin-top: 53%;
+        margin-left: 17px;
+    }
+   .address {
+    margin-top: 26px;
+    margin-left: 40px;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    const button = document.getElementById('download-button');
+
+    function generatePDF() {
+        var name = $(".name").text();
+        const element = document.getElementById('download-aadhar');
+        var a = html2pdf().from(element).save(name);
+       
+    }
+
+    button.addEventListener('click', generatePDF);
+        
+
+        </script>
+
