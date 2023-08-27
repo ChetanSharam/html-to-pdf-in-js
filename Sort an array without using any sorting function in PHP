@@ -7,12 +7,12 @@
  	for($j=$i+1; $j<$total; $j++)
     { 
     	if($array[$i] > $array[$j])
-        {        
+     {       
           $temp = $array[$i];
           $array[$i]=$array[$j];
           $array[$j]=$temp;
-        }
- 	}
+      }
+ 	 }
  }
  
  echo "<pre>";print_r($array);
