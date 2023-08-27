@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>To Do Task</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.min.css" integrity="sha512-Z/def5z5u2aR89OuzYcxmDJ0Bnd5V1cKqBEbvLOiUNWdg9PQeXVvXLI90SE4QOHGlfLqUnDNVAYyZi8UwUTmWQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 copy_row">
+				<label>Enter Value</label>
+				<input type="text" name="name" id="name" class="form-control" placeholder="enter value">
+			</div>
+			<div class="col-md-4 mt-4">
+				<button type="button" id="add_more" class="btn btn-sm btn-primary">Add More</button>
+			</div>
+		</div>
+		<div class="add_row">
+			
+		</div>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+
+var button = 	document.getElementById("add_more");
+
+button.onclick = function() {	
+	var val = document.getElementById("name").value;
+	var add_row = document.getElementsByClassName('add_row');
+
+	$(".add_row").append('<div class="row new_row"><div class="col-md-4 copy_row"><label>Enter Value</label><input type="text" name="name" class="form-control" placeholder="enter value" value="'+val+'"></div><div class="col-md-4 mt-4"><button type="button" id="remove" class="btn btn-sm btn-danger remove_row">Remove</button></div></div><br>');
+	};
+
+$(document).on('click','.remove_row',function(){ 
+	this.closest('.new_row').remove();
+})
+
+</script>
+
+</body>
+</html>
+

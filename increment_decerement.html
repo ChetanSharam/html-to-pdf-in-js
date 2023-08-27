@@ -1,0 +1,63 @@
+<style>
+	.row{
+		 margin: 0;
+        position: absolute;
+        top: 50%;
+        left:50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+
+	}
+        .input-group {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+        }
+
+        .input-group button {
+            padding: 5px 10px;
+            background-color: #f1f1f1;
+            border: none;
+            cursor: pointer;
+        }
+
+        .input-group input {
+            flex: 1;
+            text-align: center;
+            border: none;
+            padding: 5px;
+        }
+    </style>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Increment & Decerement Task</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.min.css" integrity="sha512-Z/def5z5u2aR89OuzYcxmDJ0Bnd5V1cKqBEbvLOiUNWdg9PQeXVvXLI90SE4QOHGlfLqUnDNVAYyZi8UwUTmWQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+	<div class="conatainer">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="input-group">
+			        <button class="decerement" onclick="inc_dec()">-</button>
+			        <input type="text" id="counter" placeholder="Enter something" value="1">
+			        <button class="incerement" onclick="inc_dec()">+</button>
+			    </div>
+			</div>
+		</div>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(".incerement").click(function(){
+			var val = $("#counter").val();
+			$("#counter").val(++val);
+		});
+		$(".decerement").click(function(){
+			var val = $("#counter").val();
+			if(val>0)
+			$("#counter").val(--val);
+		});
+		
+	</script>
+</body>
+</html>

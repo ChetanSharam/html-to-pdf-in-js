@@ -1,0 +1,19 @@
+<?php
+ $array = array(1, 6, 23, 10, 3, 2, 15,7);
+ $total = count($array);
+ 
+ for($i=0; $i<$total; $i++)
+ { 
+ 	for($j=$i+1; $j<$total; $j++)
+    { 
+    	if($array[$i] > $array[$j])
+     {       
+          $temp = $array[$i];
+          $array[$i]=$array[$j];
+          $array[$j]=$temp;
+      }
+ 	 }
+ }
+ 
+ echo "<pre>";print_r($array);
+?>
