@@ -1,9 +1,20 @@
 <?php
+/* 
+
+	PHP function called reverseString that takes a sentence as a string and returns a new string with the words in reverse order, but each word should remain changed. The sentence is made up of alphabetic characters and spaces only. There will be no punctuation or special characters.
+
+
+	Sample Input and Output:
+
+	Input: "Hello PHP"
+	Output: "PHP olleH"
+
+*/
+
 
 /* --------------------------------------------------------- */
 
-	
-	function revers_string($str=null)
+	function reverseString($str=null)
 	{
 		if($str != "")
 		{
@@ -18,7 +29,7 @@
 			echo "Please enter any name or string.";
 		}
 	}
-	echo revers_string("Hello PHP");
-	
+	echo reverseString("Hello PHP");
+
 /* --------------------------------------------------------- */
 ?>
