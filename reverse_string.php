@@ -2,7 +2,7 @@
 
 /* --------------------------------------------------------- */
 
-	$array = [9,5,6,4,5,7,10,4];
+	
 	function revers_string($str=null)
 	{
 		if($str != "")
@@ -18,7 +18,7 @@
 			echo "Please enter any name or string.";
 		}
 	}
-	echo revers_string("php");
+	echo revers_string("Hello PHP");
 	
 /* --------------------------------------------------------- */
 ?>
