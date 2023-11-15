@@ -134,10 +134,10 @@
         //var a = html2pdf().from(element).save(name);
 
         html2pdf(element, {
-			 	filename: name+'.pdf',
+		filename: name+'.pdf',
                 html2canvas: { scale: 2 },
                 jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }, // Set the size here
-				pagebreak: { mode: ['css', 'legacy'], before: '.page-break' } // Page break
+		pagebreak: { mode: ['css', 'legacy'], before: '.page-break' } // Page break
             });
        
     }
